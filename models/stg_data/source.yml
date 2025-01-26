@@ -1,0 +1,10 @@
+version: 2
+sources:
+   - name: datafeed_shared_schema
+     database: "{{('sales')}}"
+     schema: customer
+
+     tables:
+       - name: src_orders_data1
+       - name: src_customers_data1
+       - name: src_payments_data1
