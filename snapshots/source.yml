@@ -1,0 +1,12 @@
+version: 2
+sources:
+   - name: datafeed_shared_schema
+     database: "{{('sales')}}"
+     schema: customer
+
+     tables: 
+       - name: src_customer_snapshot_ts
+       - name: src_customer_snapshot_check
+
+     
+       
