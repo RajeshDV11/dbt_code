@@ -1,17 +1,17 @@
-{% macro default_compare_row_counts(a_name,b_name,c_name) %}
+{% macro default_compare_row_counts(a_relation,b_relation,c_relation) %}
 
  select 
- '{{a_name}}' as Table_Name,
+ '{{a_relation}}' as Table_Name,
  count(*) as total_rows
- from{{a_name}}
+ from{{a_relation}}
  union all
  select 
-'{{b_name}}' as Table_Name,
+'{{b_relation}}' as Table_Name,
  count(*) as total_rows
- from{{b_name}}
+ from{{b_relation}}
  union all
  select
- '{{c_name}}' as Table_Name,
+ '{{c_relation}}' as Table_Name,
  count(*) as total_rows
- from{{c_name}}
+ from{{c_relation}}
  {% endmacro %}
