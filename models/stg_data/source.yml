@@ -3,8 +3,21 @@ sources:
    - name: datafeed_shared_schema
      database: "{{('sales')}}"
      schema: customer
-
      tables:
        - name: src_orders_data1
+         columns:
+            - name: id
+              tests:
+                - unique
+                - not_null
+            - name: status
+              tests:
+                - accepted_values:
+                      values: ['returned','completed','return_pending','shipped','placed','cancelled','ordered']
        - name: src_customers_data1
        - name: src_payments_data1
+       - name: employee_functions 
+       - name: emp_source
+       - name: emp_s
+       - name: stg_supplies_data
+       - name: src_supplies_data
