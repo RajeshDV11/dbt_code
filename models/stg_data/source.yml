@@ -21,3 +21,5 @@ sources:
        - name: emp_s
        - name: stg_supplies_data
        - name: src_supplies_data
+       - name: employees_raw
+      
